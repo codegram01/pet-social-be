@@ -29,9 +29,9 @@ npm run dev
 ```
 
 ### Backend run at port
-PORT=8000
-API_BASE_PATH=/api
-PORT_SOCKET=8001
+- PORT=8000
+- API_BASE_PATH=/api
+- PORT_SOCKET=8001
 
 ### Example call Backend API
 ```sh
