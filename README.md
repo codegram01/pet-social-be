@@ -5,7 +5,6 @@ BackEnd for Pet Social with nodejs
 ## Feature
 
 Similar Facebook but focus on Pet. Features: 
-
 - auth
 - profile
 - post 
@@ -27,6 +26,31 @@ npm run migrate
 
 ```sh
 npm run dev
+```
+
+### Backend run at port
+PORT=8000
+API_BASE_PATH=/api
+PORT_SOCKET=8001
+
+### Example call Backend API
+```sh
+curl http://localhost:8000/api/auth/register \
+	-H "Content-Type: application/json" \
+	--request POST \
+	-d '{"email":"cong@gmail.com","password":"123456Aa","confirm_password":"123456Aa"}' 
+
+
+curl http://localhost:8000/api/auth/login \
+	-H "Content-Type: application/json" \
+	--request POST \
+	-d '{"email":"cong@gmail.com","password":"123456Aa"}' 
+
+curl http://localhost:8000/api/auth/info \
+	-H "Content-Type: application/json" \
+	-H "Authorization: ${TOKEN}" \
+	--request GET 
+
 ```
 
 ### Run FrontEnd
